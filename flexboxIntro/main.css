@@ -1,0 +1,40 @@
+:root {
+  --darkblue: #003049;
+}
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#container {
+  background-color: var(--darkblue);
+  width: 90%;
+  /* height: 500px; */
+  margin: 0 auto;
+  border: 5px solid var(--darkblue);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* flex-wrap: wrap; */
+}
+
+#container div {
+  width: 600px;
+  height: 100px;
+  text-align: center;
+  flex-basis: 200px;
+}
+
+#container div:first-of-type {
+  flex-grow: 1;
+  flex-shrink: 4;
+}
+
+#container div:nth-of-type(3) {
+  flex-grow: 2;
+  flex-shrink: 0;
+}
