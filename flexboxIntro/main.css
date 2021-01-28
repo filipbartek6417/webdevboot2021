@@ -1,5 +1,5 @@
 :root {
-  --darkblue: #003049;
+  --oceanblue: #003049;
 }
 
 body {
@@ -11,11 +11,11 @@ h1 {
 }
 
 #container {
-  background-color: var(--darkblue);
+  background-color: var(--oceanblue);
   width: 90%;
   /* height: 500px; */
   margin: 0 auto;
-  border: 5px solid var(--darkblue);
+  border: 5px solid var(--oceanblue);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

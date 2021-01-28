@@ -1,0 +1,119 @@
+:root {
+  --whiteish: #e1f1ff;
+  --skyblue: #60a9ff;
+  --darkblue: #016ff9;
+  --paleishblue: #9dd1ff;
+  --yetanotherblue: #348efe;
+  --howmanybluesarethere: #48aaff;
+  --iamlost: #269aff;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+  background-color: var(--skyblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+ul, ol, h2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.panel {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pricing-plan, .pricing-features-item:last-child {
+  border-bottom: 1px solid var(--whiteish);
+}
+
+.pricing-plan:last-child {
+  border-bottom: none;
+}
+
+.pricing-img {
+  margin-bottom: 25px;
+  max-width: 100%;
+}
+
+.pricing-header, .pricing-features-item {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.pricing-header {
+  color: #888;
+}
+
+.pricing-features {
+  margin: 50px 0 25px;
+  color: var(--darkblue);
+}
+
+.pricing-features-item {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 15px;
+  border-top: 1px solid var(--whiteish);
+}
+
+.pricing-price {
+  color: var(--darkblue);
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.pricing-button {
+  border: 1px solid var(--paleishblue);
+  border-radius: 10px;
+  color: var(--yetanotherblue);
+  display: inline-block;
+  padding: 15px 35px;
+  text-decoration: none;
+  margin: 25px 0;
+  transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover, .pricing-button:focus {
+  background-color: var(--whiteish)
+}
+
+.pricing-button.is-featured {
+  background-color: var(--howmanybluesarethere);
+  color: #fff;
+}
+
+.pricing-button.is-featured:hover, .pricing-button.is-featured:focus {
+  background-color: var(--iamlost);
+}
+
+@media (min-width: 900px) {
+  .panel {
+    flex-direction: row;
+  }
+  .pricing-plan {
+    border-bottom: none;
+    border-right: 1px solid var(--whiteish);
+    padding: 25px 50px;
+  }
+  .pricing-plan:last-child {
+    border-right: none;
+  }
+}
