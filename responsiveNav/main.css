@@ -1,0 +1,40 @@
+h1 {
+  font-size: 6em;
+  text-align: center;
+}
+
+nav {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+ul,li {
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  nav, nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 768px) {
+
+}
