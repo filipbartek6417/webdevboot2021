@@ -38,3 +38,25 @@ h1 {
   flex-grow: 2;
   flex-shrink: 0;
 }
+
+h2 {
+  text-align: center;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  border: 5px solid black;
+  height: 500px;
+  display: flex;
+}
+
+main .sidebar {
+  background-color: #6930c3;
+  flex: 1 2 250px;
+}
+
+main .maincontent {
+  background-color: #80ffdb;
+  flex: 2 1 800px;
+}
