@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title><%= category %> Products</title>
+</head>
+<body>
+  <h1><%= category %> Products</h1>
+  <ul>
+  <% for (let p of products) { %>
+    <li><a href="/products/<%= p._id %>"><%= p.name %></a></li>
+  <% } %>
+  </ul>
+  <a href="/products/new">Create New Product</a>
+  <% if(category !== 'All') { %>
+  <a href="/products">All products</a>
+  <% } %>
+</body>
+</html>
