@@ -1,19 +1,35 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>New Campground</title>
-  </head>
-  <body>
+<% layout('layout/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">New Campground</h1>
+  <div class="col-6 offset-3">
     <form class="" action="/campgrounds" method="post">
-      <div class="">
-        <label>Title:<input type="text" name="campground[title]" value=""></label>
+      <div class="mb-3">
+        <label class="form-input" for="title">Title:</label>
+        <input id="title" class="form-control" type="text" name="campground[title]" value="">
       </div>
-        <div class="">
-          <label>Location:<input type="text" name="campground[location]" value=""></label>
+        <div class="mb-3">
+          <label class="form-input" for="location">Location:</label>
+          <input id="location" class="form-control" type="text" name="campground[location]" value="">
         </div>
-        <button>Add Campground!</button>
+        <div class="mb-3">
+          <label class="form-input" for="image">Image URL:</label>
+          <input id="image" class="form-control" type="text" name="campground[image]" value="">
+        </div>
+        <div class="mb-3">
+          <label class="form-input" for="price">Price:</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="price-label">&euro;</span>
+            <input id="price" type="text" class="form-control" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="campground[price]">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-input" for="description">Description:</label>
+          <textarea rows="8" cols="80" id="description" class="form-control" type="text" name="campground[description]" value=""></textarea>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-success">Add Campground!</button>
+        </div>
     </form>
     <a href="/campgrounds">All campgrounds</a>
-  </body>
-</html>
+  </div>
+</div>
