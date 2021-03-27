@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">button {margin-top: 10px}</style>
+    <title><%= foundProduct.name %></title>
+  </head>
+  <body>
+    <h1><%= foundProduct.name %></h1>
+    <ul>
+      <li>Price: <%= foundProduct.price %>$</li>
+      <li>Category: <a href="/products?category=<%= foundProduct.category %>"><%= foundProduct.category %></a></li>
+    </ul>
+    <a href="/products">All Products</a>
+    <a href="/products/<%= foundProduct._id %>/edit">Edit</a>
+    <form action="/products/<%= foundProduct._id %>?_method=delete" method="post">
+      <button>Delete</button>
+    </form>
+  </body>
+</html>
