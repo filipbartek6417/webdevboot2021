@@ -10,10 +10,9 @@
       <ul class="list-group list-group-flush">
         <li class="list-group-item text-muted"><%= campground.location %></li>
         <li class="list-group-item"><%= campground.price %>&euro;/per night</li>
-        <li class="list-group-item">A third item</li>
       </ul>
       <div class="card-body">
-        <a href="/campgrounds/<%= campground._id%>/edit" class="card-link btn btn-primary">Card link</a>
+        <a href="/campgrounds/<%= campground._id%>/edit" class="card-link btn btn-primary">Edit</a>
         <form class="d-inline" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="post">
           <button class="btn btn-danger">Delete</button>
         </form>
