@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
+<<<<<<< HEAD
 const Review = require('./review');
+=======
+const Review = require('./models/review');
+>>>>>>> bfc3e24fe1879f0b6f89972f986ac5c757e32ae5
 
 const CampgroundSchema = new Schema({
   title: String,
