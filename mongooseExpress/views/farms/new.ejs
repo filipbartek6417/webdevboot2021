@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create New Farm</title>
+    <style>label {display: block}</style>
+  </head>
+  <body>
+    <h1>Add a farm</h1>
+    <form action="/farms" method="post">
+      <div class="">
+        <label>Name:
+          <input type="text" name="name" placeholder="Farm name">
+        </label><br>
+      </div>
+      <div class="">
+        <label>City:
+          <input type="text" name="city" placeholder="City">
+        </label><br>
+      </div>
+      <div class="">
+        <label>Email:
+          <input type="email" name="email" placeholder="Email">
+        </label><br>
+      </div>
+      <button>Submit</button>
+    </form>
+    <a href="/farms">All farms</a>
+  </body>
+</html>
