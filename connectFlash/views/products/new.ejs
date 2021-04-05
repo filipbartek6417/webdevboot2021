@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create New Product</title>
+    <style>label {display: block}</style>
+  </head>
+  <body>
+    <h1><%= farm.name %></h1>
+    <h2>Add a product</h2>
+    <form action="/farms/<%= farm._id %>/products" method="post">
+      <label>Name:
+        <input type="text" name="name" placeholder="Product name">
+      </label><br>
+      <label>Price:
+        <input type="number" name="price" placeholder="Product price">
+      </label><br>
+      <label>Category:
+        <select name="category">
+          <option selected disabled>Product category</option>
+          <% for (let o of categories) { %>
+            <option value="<%= o %>"><%= o %></option>
+          <% } %>
+        </select>
+      </label><br>
+      <button>Submit</button>
+    </form>
+    <a href="/farms/<%= farm._id %>">Back to Farm</a>
+  </body>
+</html>

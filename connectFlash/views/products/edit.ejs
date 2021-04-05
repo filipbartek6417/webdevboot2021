@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Editing <%= product.name %></title>
+    <style>label {display: block} form {margin-bottom: 10px}</style>
+  </head>
+  <body>
+    <h1>Edit product</h1>
+    <form action="/products/<%= product._id %>?_method=put" method="post">
+      <label>Name:
+        <input type="text" name="name" value="<%= product.name %>">
+      </label><br>
+      <label>Price:
+        <input type="number" name="price" value="<%= product.price %>">
+      </label><br>
+      <label>Category:
+        <select name="category">
+          <option disabled>Product category</option>
+          <% for (let o of categories) { %>
+            <option value="<%= o %>" <%= product.category === o ? 'selected' : '' %>><%= o %></option>
+          <% } %>
+        </select>
+      </label><br>
+      <button>Submit</button>
+    </form>
+    <a href="/products/<%= product._id %>">Go Back</a>
+  </body>
+</html>
