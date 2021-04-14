@@ -1,7 +1,7 @@
 (function () {
-'use strict'
-const forms = document.querySelectorAll('.validateForm')
-Array.from(forms)
+  'use strict'
+  const forms = document.querySelectorAll('.validateForm')
+  Array.from(forms)
   .forEach(function (form) {
     form.addEventListener('submit', function (event) {
       if (!form.checkValidity()) {

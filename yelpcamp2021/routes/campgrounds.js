@@ -11,20 +11,20 @@ const {storage} = require('../cloudinary');
 const upload = multer({storage});
 
 router.route('/')
-  .get(catchAsync(campgrounds.index))
-  .post(isLoggedIn, upload.array('campground[image]'), validateCampground,
-  catchAsync(campgrounds.createCampground))
+.get(catchAsync(campgrounds.index))
+.post(isLoggedIn, upload.array('campground[image]'), validateCampground,
+catchAsync(campgrounds.createCampground))
 
 router.get("/new", isLoggedIn, campgrounds.createCampForm);
 
 router.route('/:id')
-  .get(catchAsync(campgrounds.detailPage))
-  .put(isLoggedIn, isAuthorized, upload.array('campground[image]'), validateCampground, 
-  catchAsync(campgrounds.alterCampground))
-  .delete(isLoggedIn, isAuthorized,
+.get(catchAsync(campgrounds.detailPage))
+.put(isLoggedIn, isAuthorized, upload.array('campground[image]'), validateCampground,
+catchAsync(campgrounds.alterCampground))
+.delete(isLoggedIn, isAuthorized,
   catchAsync(campgrounds.deleteCampground))
 
-router.get("/:id/edit", isLoggedIn, isAuthorized,
+  router.get("/:id/edit", isLoggedIn, isAuthorized,
   catchAsync(campgrounds.editCampground));
 
-module.exports = router;
+  module.exports = router;
