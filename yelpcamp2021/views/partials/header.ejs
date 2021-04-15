@@ -13,7 +13,7 @@
       <div class="navbar-nav" style="margin-left: auto">
         <% if (!currentUser) { %>
           <a class="nav-link" href="/login">Login</a>
-          <a class="nav-link" href="/register">Sign Up</a>
+          <a class="nav-link" href="/register">Register</a>
           <% } else { %>
             <div class="nav-link"><span class="badge bg-primary">Hello, <%= currentUser.username %>!</span></div>
             <a class="nav-link" href="/logout">Logout</a>

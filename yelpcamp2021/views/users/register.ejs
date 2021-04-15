@@ -1,26 +1,38 @@
 <% layout('layout/boilerplate') %>
-<h1>Register</h1>
-<form class="validateForm" action="/register" method="post" novalidate>
-  <div class="mb-3">
-    <label class="form-label" for="username">Username:</label>
-    <input class="form-control" type="text" id="username" name="username" value="" required>
-    <div class="valid-feedback">
-      Looks good!
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 mb-5">
+      <div class="card shadow">
+        <img src="https://images.unsplash.com/photo-1485809052957-5113b0ff51af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1866&q=80" alt="loginPhoto"
+        class="card-img-top">
+        <div class="card-body">
+          <h1>Register</h1>
+          <form class="validateForm" action="/register" method="post" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="username">Username:</label>
+              <input class="form-control" type="text" id="username" name="username" value="" autofocus required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="email">Email:</label>
+              <input class="form-control" type="email" id="email" name="email" value="" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="password">Password:</label>
+              <input class="form-control" type="password" id="password" name="password" value="" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <button class="btn btn-success">Register!</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="mb-3">
-    <label class="form-label" for="email">Email:</label>
-    <input class="form-control" type="email" id="email" name="email" value="" required>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="mb-3">
-    <label class="form-label" for="password">Password:</label>
-    <input class="form-control" type="password" id="password" name="password" value="" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$">
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <button class="btn btn-success">Register!</button>
-</form>
+</div>
