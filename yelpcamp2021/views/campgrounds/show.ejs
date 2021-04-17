@@ -80,7 +80,10 @@
                   <button class="btn btn-success">Submit!</button>
                 </form>
                 <% } %>
-                <h2>Other reviews:</h2>
+                <h2>Reviews:</h2>
+                <% if (campground.reviews.length == 0) { %>
+                <p>There are currently no reviews for this campground.</p>
+                <% } else { %>
                 <% for(let r of campground.reviews) { %>
                   <div class="card mb-3">
                     <div class="card-body">
@@ -100,7 +103,7 @@
                             <% } %>
                           </div>
                         </div>
-                        <% } %>
+                        <% }} %>
                       </div>
                     </div>
 
