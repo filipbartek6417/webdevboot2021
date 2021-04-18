@@ -20,7 +20,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const helmet = require('helmet');
 const MongoDBStore = require('connect-mongo');
 const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/yelpcamp";
-const secret = process.env.SECRET || 'notASecret64';
+const secret = process.env.HEROKU_SECRET;
 
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
@@ -44,7 +44,7 @@ const store = MongoDBStore.create({
   mongoUrl: dbUrl,
   touchAfter: 24 * 3600,
   crypto: {
-    secret: 'notASecret64',
+    secret,
   },
 })
 store.on('error', function (e) {
@@ -54,7 +54,7 @@ store.on('error', function (e) {
 app.use(session({
   store,
   name: 'login',
-  secret: 'notASecret64',
+  secret,
   resave: false,
   saveUninitialized: true,
   cookie: {
